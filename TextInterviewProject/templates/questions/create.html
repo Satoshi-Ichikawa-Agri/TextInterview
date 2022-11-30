@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h1>Create</h1>
+<form method="post" action="">
+    {% csrf_token %}
+    {{ form }}<br>
+    <input type="submit" name="Create Question">
+</form>
+
+{% endblock %}
