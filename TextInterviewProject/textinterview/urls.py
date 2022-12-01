@@ -20,5 +20,5 @@ from django.urls import include, path
 # Routing
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('textInterviewApp.urls')),
+    path('', include('QAApp.urls')),
 ]

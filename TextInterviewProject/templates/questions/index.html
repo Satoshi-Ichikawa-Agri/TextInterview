@@ -20,9 +20,10 @@
             <p>{{ question.answer }}</p>
         </div>
         <div class="card-footer">
-            <a href={% url 'update' question.id %}>
+            {{ question.created_date }}&nbsp;|
+            <a class="btn btn-primary" href={% url 'update' question.id %}>
                 <i class="bi bi-pencil-square"></i>更新</a> |
-            <a href={% url 'delete' question.id %}>
+            <a class="btn btn-danger" href={% url 'delete' question.id %}>
                 <i class="bi bi-trash-fill"></i>削除</a>
         </div>
     </div>

@@ -11,6 +11,9 @@ from .models import *
 
 
 class QuestionForm(forms.ModelForm):
+    title = forms.CharField(max_length=50, label="カテゴリ")
+    question_content = forms.CharField(max_length=100, label="質問")
+    answer = forms.CharField(widget=forms.Textarea(), max_length=4000, label="回答")
 
     class Meta:
         model = Question
