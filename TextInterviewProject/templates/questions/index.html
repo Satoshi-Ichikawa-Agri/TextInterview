@@ -2,17 +2,31 @@
 
 {% block content %}
 
-<h1>INDEX</h1>
-<a href={% url 'create' %}>新規作成</a>
+<h2>INDEX</h2>
+<hr />
+<p class="text-end">
+    <a href={% url 'create' %}>新規作成</a>
+</p>
 
 {% for question in question_list %}
-<div>
-    <p>{{ question.title }}</p>
-    <p>{{ question.question_content }}</p>
-    <p>{{ question.answer }}</p>
-    <a href={% url 'update' question.id %}>更新</a>
-    <a href={% url 'delete' question.id %}>削除</a>
+<div class="card">
+    <div>
+        <div class="card-header">
+            <p>{{ question.title }}</p>
+            <hr />
+            <p>{{ question.question_content }}</p>
+        </div>
+        <div class="card-body">
+            <p>{{ question.answer }}</p>
+        </div>
+        <div class="card-footer">
+            <a href={% url 'update' question.id %}>
+                <i class="bi bi-pencil-square"></i>更新</a> |
+            <a href={% url 'delete' question.id %}>
+                <i class="bi bi-trash-fill"></i>削除</a>
+        </div>
+    </div>
 </div>
+<br>
 {% endfor %}
-
 {% endblock %}

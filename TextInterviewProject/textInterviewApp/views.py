@@ -1,5 +1,3 @@
-""" QuestionControllers
-"""
 from django.shortcuts import render, redirect
 
 from .forms import *
@@ -37,7 +35,7 @@ def create(request):
         form = QuestionForm(request.POST)
         if form.is_valid():
             form.save()
-        return redirect('/')
+        return redirect('/index/')
 
     context = {'question_list': question_list, 'form': form}
 
@@ -56,7 +54,7 @@ def update(request, id):
         form = QuestionForm(request.POST, instance=question)
         if form.is_valid():
             form.save()
-        return redirect('/')
+        return redirect('/index/')
 
     context = {'form': form}
 
@@ -72,7 +70,7 @@ def delete(request, id):
 
     if request.method == 'POST':
         item.delete()
-        return redirect('/')
+        return redirect('/index/')
 
     context = {'item': item}
     return render(request, 'questions/delete.html', context)
