@@ -2,12 +2,12 @@
 """
 from django.urls import path
 
-from . import views
+from .Views import qa_views as QAV
 
 urlpatterns = [
-    path('', views.home, name='home'),
-    path('index/', views.index, name='index'),
-    path('create/', views.create, name='create'),
-    path('update/<str:id>/', views.update, name='update'),
-    path('delete/<str:id>/', views.delete, name='delete'),
+    path('', QAV.home, name='home'),
+    path('index/', QAV.index, name='index'),
+    path('create/', QAV.create, name='create'),
+    path('update/<str:id>/', QAV.update, name='update'),
+    path('delete/<str:id>/', QAV.delete, name='delete'),
 ]

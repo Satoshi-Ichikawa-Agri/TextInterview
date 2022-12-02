@@ -2,8 +2,8 @@
 """
 from django.shortcuts import render, redirect
 
-from .forms import *
-from .models import *
+from ..forms import *
+from ..Models.qa_models import *
 
 
 def home(request):

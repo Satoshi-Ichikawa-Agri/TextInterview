@@ -4,7 +4,7 @@
 """
 from django.contrib import admin
 
-from .models import *
+from .Models.qa_models import *
 
 
 # 管理サイトで「Question」モデルのCRUDを実行する

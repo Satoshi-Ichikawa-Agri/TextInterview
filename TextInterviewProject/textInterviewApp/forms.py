@@ -7,7 +7,7 @@ Webサイトへ来てくれた人からの情報をデータ保存したいと�
 from django import forms
 from django.forms import ModelForm
 
-from .models import *
+from .Models.qa_models import *
 
 
 class QuestionForm(forms.ModelForm):
