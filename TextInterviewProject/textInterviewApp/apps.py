@@ -1,4 +1,4 @@
-""" textInterviewApp Apps
+""" textInterviewApp
 appの設定を記述することでその内容をconfigフォルダのsettings.pyで読み込めるようにし、
 結果的にプロジェクト全体に、該当するappの機能を反映しています。
 

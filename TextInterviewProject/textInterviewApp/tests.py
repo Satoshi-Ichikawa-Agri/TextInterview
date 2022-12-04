@@ -1,4 +1,4 @@
-""" textInterviewApp Tests create
+""" textInterviewApp
 """
 
 from django.test import TestCase

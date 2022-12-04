@@ -1,4 +1,4 @@
-""" textInterviewApp Admin
+""" textInterviewApp
 管理サイトにmodels.pyで作成したモデルを登録するには以下のようにadmin.pyを編集する。
 
 """

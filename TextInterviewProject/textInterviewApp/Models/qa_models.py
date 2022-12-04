@@ -1,4 +1,4 @@
-""" textInterviewApp Models
+""" Quesition Models
 """
 from django.db import models
 
